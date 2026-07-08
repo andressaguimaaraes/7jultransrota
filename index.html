@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação do BI · Resumo da reunião</title>
+<style>
+  :root{
+    --paper:#F7F8FA; --card:#FFFFFF; --ink:#1c1c1e; --gray:#8a8a8e; --gray2:#adadb4;
+    --hair:#EAECEF; --accent:#2F6BED; --accent-soft:#E4ECFD;
+    --ok:#2E9E5B; --ok-bg:#E5F3EB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.45;padding:34px 16px}
+  .note{max-width:680px;margin:0 auto;background:var(--card);border:1px solid var(--hair);
+    border-radius:16px;box-shadow:0 10px 40px rgba(30,40,70,.06);padding:38px 40px 32px}
+  .date{text-align:center;color:var(--gray);font-size:12.5px;font-weight:500;margin-bottom:20px}
+  h1{font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1.16}
+  .lead{color:#48474b;font-size:15.5px;margin-top:9px}
+  .rule{height:1px;background:var(--hair);border:none;margin:24px 0}
+  h2{font-size:15px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:center;gap:9px;margin-bottom:12px}
+  h2 .sq{width:16px;height:16px;border-radius:5px;background:var(--accent);display:inline-block}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px}
+  .fact{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--hair)}
+  .fact .k{color:var(--gray);font-size:14px}
+  .fact .v{font-weight:700;font-size:14px;text-align:right}
+  ul{list-style:none}
+  .item{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--hair)}
+  .item:last-child{border-bottom:none}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none;margin-top:6px}
+  .ring{width:21px;height:21px;border-radius:50%;border:2px solid #cfd6e0;flex:none;margin-top:1px}
+  .item .body{flex:1;font-size:15px}
+  .item .body b{font-weight:700}
+  .meta{margin-top:5px}
+  .who{font-size:12.5px;color:var(--accent);font-weight:600;background:var(--accent-soft);padding:2px 9px;border-radius:20px}
+  .foot{text-align:center;color:var(--gray2);font-size:12px;margin-top:26px}
+  @media(max-width:560px){.note{padding:28px 22px}.facts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="note">
+    <div class="date">7 de julho de 2026 · 11h59</div>
+    <h1>Apresentação do BI — aprovação da interface</h1>
+    <p class="lead">Apresentação do painel de Business Intelligence (versão MVP): funcionalidades, validação dos dados e planejamento das próximas entregas. Com Diogo Porfirio (Winner) e Matheus Freire.</p>
+
+    <hr class="rule">
+    <h2><span class="sq"></span>Em resumo</h2>
+    <div class="facts">
+      <div class="fact"><span class="k">Status</span><span class="v">MVP — teste de integração</span></div>
+      <div class="fact"><span class="k">Foco dos dados</span><span class="v">Faturamento</span></div>
+      <div class="fact"><span class="k">Banco de dados</span><span class="v">Supabase</span></div>
+      <div class="fact"><span class="k">Próximo marco</span><span class="v">Validar dados após ir ao ar</span></div>
+    </div>
+
+    <hr class="rule">
+    <h2><span class="sq"></span>O que foi apresentado</h2>
+    <ul>
+      <li class="item"><span class="dot"></span><div class="body"><b>Painel de faturamento</b> — faturado, não faturado e em aberto, em cartões, gráficos e tabelas</div></li>
+      <li class="item"><span class="dot"></span><div class="body"><b>Filtros interativos</b> — clicar numa métrica atualiza as demais visualizações automaticamente</div></li>
+      <li class="item"><span class="dot"></span><div class="body"><b>Filtros de período</b> — diário, semanal, mensal, anual e personalizado</div></li>
+      <li class="item"><span class="dot"></span><div class="body"><b>Comparativos entre períodos</b> — em fase posterior; imediato só p/ faturamento por filial</div></li>
+      <li class="item"><span class="dot"></span><div class="body"><b>Visão de futuro</b> — copiloto de IA por chat + resumo executivo diário por setor</div></li>
+      <li class="item"><span class="dot"></span><div class="body"><b>Perfis de acesso</b> — visão segmentada (faturamento, despesa, auditoria, admin) por hierarquia</div></li>
+    </ul>
+
+    <hr class="rule">
+    <h2><span class="sq"></span>Próximos passos</h2>
+    <ul>
+      <li class="item"><span class="ring"></span><div class="body"><b>Validar os dados do BI</b> — extrair relatório do sistema (GW) após o domínio ir ao ar e conferir se os valores batem<div class="meta"><span class="who">Matheus</span></div></div></li>
+      <li class="item"><span class="ring"></span><div class="body"><b>Criar conta no Supabase</b> — e-mail e senha dedicados para o banco de dados e enviar as credenciais<div class="meta"><span class="who">Joãoas</span></div></div></li>
+      <li class="item"><span class="ring"></span><div class="body"><b>Pesquisar comparativos</b> — avaliar a viabilidade técnica de comparar períodos nos indicadores<div class="meta"><span class="who">Diogo</span></div></div></li>
+      <li class="item"><span class="ring"></span><div class="body"><b>Gerar cronograma por lotes</b> — organizar as demandas pendentes em entregas divididas em etapas<div class="meta"><span class="who">Diogo</span></div></div></li>
+    </ul>
+
+    <div class="foot">winner.ia · Projeto Business Intelligence</div>
+  </div>
+</body>
+</html>
